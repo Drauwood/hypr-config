@@ -10,7 +10,6 @@ echo "Copying settings..."
 cp -r .config ~/
 cp -r .bash_profile ~/
 cp -r .bashrc ~/
-cp -r .xinitrc ~/
 
 echo "Volume 100%..."
 pamixer --set-volume 100
