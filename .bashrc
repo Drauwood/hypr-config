@@ -198,3 +198,4 @@ fi
 # vi-mode breaks ctrl-L to clear screen
 # fix it in .inputrc
 #set -o vi # vi-mode
+fish
