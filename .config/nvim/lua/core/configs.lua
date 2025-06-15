@@ -16,6 +16,7 @@ vim.opt.shell = "/bin/zsh"
 -- Mouse
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
+vim.opt.cursorline = true
 
 -- Line Numbers
 vim.opt.number = true

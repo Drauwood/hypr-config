@@ -21,12 +21,12 @@ UpdateReposytoryesDB() {
 
 InstallXorg() {
     echo "Install xorg..."
-    sudo pacman --noconfirm -S xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb
+    sudo pacman --noconfirm -S xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb xorg-server-devel
 }
 
 InstallMainPackeges() {
     echo "Install Programs..."
-    sudo pacman --noconfirm -S hyprland hyprpaper waybar firefox neovim alacritty mc cmake smplayer cmus wofi btop numlockx udiskie pamixer grim slurp feh zip unzip
+    sudo pacman --noconfirm -S hyprland hyprpaper waybar firefox neovim alacritty mc cmake smplayer cmus wofi btop numlockx udiskie pamixer grim slurp feh zip unzip nodejs npm transmission-gtk
 }
 
 InstallFont() {
@@ -37,6 +37,17 @@ InstallFont() {
 InstallOrUpdateBaseBasedevel() {
     echo "Update or install base, base-devel packeges..."
     sudo pacman --noconfirm -S base base-devel
+}
+
+InstallLib() {
+	echo ":: Update or install lib's packeges..."
+	sudo pacman --noconfirm -S libxcursor libxrandr libxinerama libxi libxkbcommon
+}
+
+InstallLogin() {
+	echo ":: Install GDM ..."
+	sudo pacman --noconfirm -S gdm
+	sudo systemctl enable gdm
 }
 
 CopyConfigs() {
@@ -59,6 +70,8 @@ UpdateReposytoryesDB
 InstallMainPackeges
 InstallFont
 InstallOrUpdateBaseBasedevel
+#InstallLib
+#InstallLogin
 
 CopyConfigs
 #MakeExecutable
