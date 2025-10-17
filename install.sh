@@ -26,7 +26,7 @@ InstallXorg() {
 
 InstallMainPackeges() {
     echo "Install Programs..."
-    sudo pacman --noconfirm -S hyprland hyprpaper waybar firefox neovim alacritty mc cmake smplayer cmus wofi btop numlockx udiskie pamixer grim slurp feh zip unzip nodejs npm transmission-gtk
+    sudo pacman --noconfirm -S hyprland hyprpaper waybar firefox neovim alacritty mc cmake go smplayer cmus wofi btop numlockx udiskie pamixer grim slurp feh zip unzip transmission-gtk nodejs npm
 }
 
 InstallFont() {
@@ -76,5 +76,5 @@ InstallOrUpdateBaseBasedevel
 CopyConfigs
 #MakeExecutable
 
-echo "Volume 100%..."
-pamixer --set-volume 100
+#echo "Volume 100%..."
+#pamixer --set-volume 100
