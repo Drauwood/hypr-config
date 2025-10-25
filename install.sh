@@ -26,7 +26,7 @@ InstallXorg() {
 
 InstallMainPackeges() {
     echo "Install Programs..."
-    sudo pacman --noconfirm -S hyprland hyprpaper waybar firefox neovim alacritty mc cmake smplayer cmus wofi btop numlockx udiskie pamixer grim slurp feh zip unzip transmission-gtk nodejs npm
+    sudo pacman --noconfirm -S hyprland hyprpaper waybar firefox neovim alacritty mc cmake smplayer wofi btop numlockx udiskie pamixer grim slurp feh zip unzip transmission-gtk nodejs npm
 }
 
 InstallFont() {
