@@ -9,33 +9,33 @@ IsRoot() {
 
 HelloScreen() {
   echo '==========================================================='
-  echo 'Hyprland install script'
-  echo 'Author: https://github.com/Drauwood'
+  echo ':: Hyprland Install Script'
+  echo ':: Author: https://github.com/Drauwood'
   echo '==========================================================='
 }
 
 UpdateReposytoryesDB() {
-  echo "Updating system..."
+  echo ":: Updating system..."
   sudo pacman --noconfirm -Sy
 }
 
 InstallXorg() {
-  echo "Install xorg..."
+  echo ":: Install xorg..."
   sudo pacman --noconfirm -S xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb xorg-server-devel
 }
 
 InstallMainPackeges() {
-  echo "Install Programs..."
-  sudo pacman --noconfirm -S hyprland hyprpaper hyprlauncher waybar firefox neovim alacritty mc cmake smplayer wofi btop numlockx udiskie pamixer grim slurp feh zip unzip transmission-gtk nodejs npm
+  echo ":: Install Programs..."
+  sudo pacman --noconfirm -S hyprland hyprpaper hyprlauncher waybar firefox neovim alacritty mc cmake smplayer btop numlockx udiskie pamixer grim slurp feh zip unzip transmission-gtk nodejs npm
 }
 
 InstallFont() {
-  echo "Install Fonts..."
+  echo ":: Install Fonts..."
   sudo pacman --noconfirm -S ttf-liberation ttf-dejavu opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-hanazono ttf-jetbrains-mono-nerd
 }
 
 InstallOrUpdateBaseBasedevel() {
-  echo "Update or install base, base-devel packeges..."
+  echo ":: Update or install base, base-devel packeges..."
   sudo pacman --noconfirm -S base base-devel
 }
 
@@ -57,7 +57,6 @@ CopyConfigs() {
 }
 
 MakeExecutable() {
-  chmod +x ~/.config/bspwm/bspwmrc
   chmod +x ~/.config/polybar/launch.sh
   chmod +x ~/.config/polybar/launch_additional.sh
 }
