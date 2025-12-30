@@ -6,7 +6,7 @@ require('core.configs')
 
 -- Plugins
 require('plugins.neotree')
-require('plugins.treesitter')
+--require('plugins.treesitter')
 require('plugins.telescope')
 require('plugins.buffline')
 require('plugins.lualine')
