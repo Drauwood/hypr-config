@@ -1,11 +1,11 @@
 * {
-	border-radius: 10;
+	border-radius: 0;
 	border: none;
 	font-family: JetBrainsMono-Bold, Symbols Nerd Font;
 	font-weight: normal;
 	font-size: 14px;
 	padding: 0px 0px;
-	margin: 0px 5px;
+	margin: 0px 0px;
 }
 
 @define-color bg #282c34;
