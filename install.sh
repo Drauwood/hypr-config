@@ -10,7 +10,8 @@ IsRoot() {
 HelloScreen() {
   echo '==========================================================='
   echo ':: Hyprland Install Script'
-  echo ':: Author: https://github.com/Drauwood'
+  echo ':: Author: Drauwood'
+  echo ':: GitHub: https://github.com/Drauwood'
   echo '==========================================================='
 }
 
