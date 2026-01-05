@@ -2,7 +2,7 @@
 
 IsRoot() {
   if [[ $EUID -ne 0 ]]; then
-    echo "This script must be run as root"
+    echo ":: This script must be run as root"
     exit 1
   fi
 }
@@ -27,7 +27,7 @@ InstallXorg() {
 
 InstallMainPackeges() {
   echo ":: Install Programs..."
-  sudo pacman --noconfirm -S hyprland hyprpaper hyprlauncher waybar firefox neovim alacritty mc cmake smplayer btop numlockx udiskie pamixer grim slurp feh zip unzip transmission-gtk nodejs npm
+  sudo pacman --noconfirm -S hyprland hyprpaper hyprlauncher waybar firefox neovim alacritty mc cmake smplayer btop numlockx udiskie pamixer grim slurp feh zip unzip transmission-gtk fzf nodejs npm
 }
 
 InstallFont() {
