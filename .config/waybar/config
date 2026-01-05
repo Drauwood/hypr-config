@@ -2,8 +2,8 @@
 	"layer": "top",
 	"position": "top",
 	"height": 30,
-	"width": 1900,
-	"margin-top": 10,
+	"width": 1920,
+	"margin-top": 0,
 
 	
     "modules-left": ["cpu", "memory", "custom/cmus"],
@@ -12,13 +12,13 @@
 
 
     "cpu": {
-		"format": "  {usage}%",
+		"format": "   {usage}% ",
 		"tooltip": false
     },
 
 
 	"memory": {
-		"format": "  {}%",
+		"format": "   {}% ",
 		"tooltip": false
 	},
 
@@ -31,7 +31,7 @@
 
 	"custom/menu": {
 		"format": "{icon}",
-		"format-icons": "󰣇",
+		"format-icons": "󰣇  ",
 		"on-click": "wofi --show drun -c ~/.config/wofi/config -s ~/.config/wofi/style.css",
 		"escape": true,
 		"tooltip": false
@@ -56,8 +56,8 @@
 
 	"hyprland/language": {
 	    "format": "{}",
-	    "format-en": "EN",
-	    "format-ru": "RU",
+	    "format-en": "EN ",
+	    "format-ru": "RU ",
 	},
 
 
@@ -68,14 +68,14 @@
 
 
 	"clock": {
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"tooltip-format": "<big> {:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 		"format-alt": "{:%d-%m-%y}"
 	},
 
 
     "pulseaudio": {
 		"scroll-step": 5,
-		"format": "{icon}   {volume}%",
+		"format": "{icon}   {volume}% ",
 		"format-icons": {
 			"default": ["", "", ""]
 		},
@@ -108,7 +108,7 @@
 	},
 
 	"custom/sep": {
-	"format": "_",
+	"format": " ",
 	},
 
 
