@@ -62,6 +62,12 @@ MakeExecutable() {
     chmod +x ~/.config/polybar/launch_additional.sh
 }
 
+WaybarInstall() {
+    echo ":: Copy Waybar configs ..."
+    git clone -b fix/v0.14.0 https://github.com/sejjy/mechabar.git ~/.config/waybar
+    ~/.config/waybar/install.sh
+}
+
 #IsRoot
 HelloScreen
 UpdateReposytoryesDB
@@ -75,6 +81,7 @@ InstallOrUpdateBaseBasedevel
 
 CopyConfigs
 #MakeExecutable
+WaybarInstall
 
 echo ":: Volume 100%..."
 pamixer --set-volume 100
