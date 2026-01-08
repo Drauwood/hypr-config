@@ -64,9 +64,10 @@ MakeExecutable() {
 
 WaybarInstall() {
     echo ":: Copy Waybar configs..."
-    git clone -b fix/v0.14.0 https://github.com/sejjy/mechabar.git ~/.config/waybar
+    git clone -b fix/v0.14.0 https://github.com/Drauwood/mechabar.git ~/.config/waybar
     ~/.config/waybar/install.sh
 }
+
 NvimCopy() {
     echo ":: Copy Nvim configs..."
     git clone https://github.com/Drauwood/nvim.git ~/.config/nvim
