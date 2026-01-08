@@ -2,7 +2,7 @@
 
 IsRoot() {
     if [[ $EUID -ne 0 ]]; then
-        echo ":: This script must be run as root"
+        echo ":: This script must be run as root..."
         exit 1
     fi
 }
@@ -46,7 +46,7 @@ InstallLib() {
 }
 
 InstallLogin() {
-    echo ":: Install GDM ..."
+    echo ":: Install GDM..."
     sudo pacman --noconfirm -S gdm
     sudo systemctl enable gdm
 }
@@ -63,9 +63,13 @@ MakeExecutable() {
 }
 
 WaybarInstall() {
-    echo ":: Copy Waybar configs ..."
+    echo ":: Copy Waybar configs..."
     git clone -b fix/v0.14.0 https://github.com/sejjy/mechabar.git ~/.config/waybar
     ~/.config/waybar/install.sh
+}
+NvimCopy() {
+    echo ":: Copy Nvim configs..."
+    git clone https://github.com/Drauwood/nvim.git ~/.config/nvim
 }
 
 #IsRoot
@@ -82,6 +86,4 @@ InstallOrUpdateBaseBasedevel
 CopyConfigs
 #MakeExecutable
 WaybarInstall
-
-echo ":: Volume 100%..."
-pamixer --set-volume 100
+NvimCopy
