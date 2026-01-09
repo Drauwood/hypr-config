@@ -27,7 +27,7 @@ InstallXorg() {
 
 InstallMainPackeges() {
     echo ":: Install Programs..."
-    sudo pacman --noconfirm -S hyprland hyprpaper hyprshot waybar firefox neovim alacritty ranger cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm
+    sudo pacman --noconfirm -S hyprland hyprpaper hyprshot waybar firefox neovim alacritty mc ranger cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm
 }
 
 InstallFont() {
@@ -62,12 +62,6 @@ MakeExecutable() {
     chmod +x ~/.config/polybar/launch_additional.sh
 }
 
-WaybarInstall() {
-    echo ":: Copy Waybar configs..."
-    git clone -b fix/v0.14.0 https://github.com/Drauwood/mechabar.git ~/.config/waybar
-    ~/.config/waybar/install.sh
-}
-
 NvimCopy() {
     echo ":: Copy Nvim configs..."
     git clone https://github.com/Drauwood/nvim.git ~/.config/nvim
@@ -86,5 +80,4 @@ InstallOrUpdateBaseBasedevel
 
 CopyConfigs
 #MakeExecutable
-WaybarInstall
 NvimCopy
