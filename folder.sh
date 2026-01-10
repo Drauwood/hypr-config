@@ -2,5 +2,5 @@
 
 mkdir ~/Documents
 mkdir ~/Downloads
-mkdir ~/GitHub
 mkdir ~/Pictures
+mkdir ~/Projects
