@@ -32,7 +32,7 @@ InstallMainPackeges() {
 
 InstallFont() {
     echo ":: Install Fonts..."
-    sudo pacman --noconfirm -S ttf-liberation ttf-dejavu opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-hanazono ttf-jetbrains-mono-nerd
+    sudo pacman --noconfirm -S ttf-liberation ttf-dejavu opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-jetbrains-mono-nerd
 }
 
 InstallOrUpdateBaseBasedevel() {
