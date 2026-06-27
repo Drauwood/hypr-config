@@ -79,8 +79,8 @@ set_prompt () {
     # git status parse
 
     GIT_NOT_FOUND=""                  #Nothing
-    GIT_PROMPT_STAGED="${White}● "    # staged files/directories
-    GIT_PROMPT_CLEAN="${White}✔ "     # clean repo
+    GIT_PROMPT_STAGED="${Red}● "    # staged files/directories
+    GIT_PROMPT_CLEAN="${Green}✔ "     # clean repo
 
     # are we on repo?
     if [[ "$(git rev-parse --git-dir 2> /dev/null)" = '.git' ]]; then
@@ -198,3 +198,4 @@ fi
 # vi-mode breaks ctrl-L to clear screen
 # fix it in .inputrc
 #set -o vi # vi-mode
+. "$HOME/.cargo/env"
