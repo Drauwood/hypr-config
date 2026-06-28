@@ -1,8 +1,7 @@
 #!/bin/bash
 
-GREEN='\033[0;32m'
-RED='\033[0;31m'
-RESET='\033[0m'
+RED='\033[0;31m[ ERROR ]\033[0m'
+GREEN='\033[0;32m[ OK ]\033[0m'
 
 IsRoot() {
     if [[ $EUID -ne 0 ]]; then
@@ -22,43 +21,43 @@ HelloScreen() {
 UpdateReposytoryesDB() {
     echo ":: Updating system..."
     sudo pacman --noconfirm -Sy &&
-        echo -e "$GREEN[ ✔ ]$RESET pacman --noconfirm -Sy" >> result.txt ||
-        echo -e "$RED[ x ]$RESET pacman --noconfirm -Sy" >> result.txt
+        echo -e "$GREEN pacman --noconfirm -Sy" >> result.txt ||
+        echo -e "$RED pacman --noconfirm -Sy" >> result.txt
 }
 
 InstallXorg() {
     echo ":: Install xorg..."
     sudo pacman --noconfirm -S xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb xorg-server-devel &&
-        echo -e "$GREEN[ ✔ ]$RESET Install xorg" >> result.txt ||
-        echo -e "$RED[ x ]$RESET Install xorg" >> result.txt
+        echo -e "$GREEN Install xorg" >> result.txt ||
+        echo -e "$RED Install xorg" >> result.txt
 }
 
 InstallMainPackeges() {
     echo ":: Install Programs..."
     sudo pacman --noconfirm -S hyprland hyprpaper uwsm libnewt hyprshot waybar firefox neovim alacritty mc ranger smplayer cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm &&
-        echo -e "$GREEN[ ✔ ]$RESET Install Programs" >> result.txt ||
-        echo -e "$RED[ x ]$RESET Install Programs" >> result.txt
+        echo -e "$GREEN Install Programs" >> result.txt ||
+        echo -e "$RED Install Programs" >> result.txt
 }
 
 InstallFont() {
     echo ":: Install Fonts..."
     sudo pacman --noconfirm -S ttf-liberation ttf-dejavu opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-jetbrains-mono-nerd &&
-        echo -e "$GREEN[ ✔ ]$RESET Install Fonts" >> result.txt ||
-        echo -e "$RED[ x ]$RESET Install Fonts" >> result.txt
+        echo -e "$GREEN Install Fonts" >> result.txt ||
+        echo -e "$RED Install Fonts" >> result.txt
 }
 
 InstallOrUpdateBaseBasedevel() {
     echo ":: Update or install base, base-devel packeges..."
     sudo pacman --noconfirm -S base base-devel &&
-        echo -e "$GREEN[ ✔ ]$RESET Update or install base, base-devel packeges" >> result.txt ||
-        echo -e "$RED[ x ]$RESET Update or install base, base-devel packeges" >> result.txt
+        echo -e "$GREEN Update or install base, base-devel packeges" >> result.txt ||
+        echo -e "$RED Update or install base, base-devel packeges" >> result.txt
 }
 
 InstallLib() {
     echo ":: Update or install lib's packeges..."
     sudo pacman --noconfirm -S libxcursor libxrandr libxinerama libxi libxkbcommon &&
-        echo -e "$GREEN[ ✔ ]$RESET Update or install lib's packeges" >> result.txt ||
-        echo -e "$RED[ x ]$RESET Update or install lib's packeges" >> result.txt
+        echo -e "$GREEN Update or install lib's packeges" >> result.txt ||
+        echo -e "$RED Update or install lib's packeges" >> result.txt
 }
 
 InstallLogin() {
@@ -81,8 +80,8 @@ MakeExecutable() {
 NvimCopy() {
     echo ":: Copy Nvim configs..."
     git clone https://github.com/Drauwood/nvim.git ~/.config/nvim &&
-        echo -e "$GREEN[ ✔ ]$RESET Copy Nvim configs" >> result.txt ||
-        echo -e "$RED[ x ]$RESET Copy Nvim configs" >> result.txt
+        echo -e "$GREEN Copy Nvim configs" >> result.txt ||
+        echo -e "$RED Copy Nvim configs" >> result.txt
 }
 
 #IsRoot
@@ -97,8 +96,8 @@ InstallOrUpdateBaseBasedevel
 #InstallLogin
 
 CopyConfigs &&
-    echo -e "$GREEN[ ✔ ]$RESET Copy configs" >> result.txt ||
-    echo -e "$RED[ x ]$RESET Copy configs" >> result.txt
+    echo -e "$GREEN Copy configs" >> result.txt ||
+    echo -e "$RED Copy configs" >> result.txt
 #MakeExecutable
 NvimCopy
 
