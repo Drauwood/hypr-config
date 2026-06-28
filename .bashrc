@@ -79,8 +79,8 @@ set_prompt () {
     # git status parse
 
     GIT_NOT_FOUND=""                  #Nothing
-    GIT_PROMPT_STAGED="${Red}● "    # staged files/directories
-    GIT_PROMPT_CLEAN="${Green}✔ "     # clean repo
+    GIT_PROMPT_STAGED="${White}● "    # staged files/directories
+    GIT_PROMPT_CLEAN="${White}✔ "     # clean repo
 
     # are we on repo?
     if [[ "$(git rev-parse --git-dir 2> /dev/null)" = '.git' ]]; then
