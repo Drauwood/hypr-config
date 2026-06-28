@@ -2,7 +2,7 @@
 
 IsRoot() {
     if [[ $EUID -ne 0 ]]; then
-        echo ":: This script must be run as root..."
+        echo ":: This script must be run as root..." >> result.txt
         exit 1
     fi
 }
@@ -16,33 +16,45 @@ HelloScreen() {
 }
 
 UpdateReposytoryesDB() {
-    echo ":: Updating system..."
-    sudo pacman --noconfirm -Sy
+    echo ":: Updating system..." >> result.txt
+    sudo pacman --noconfirm -Sy &&
+        echo "[ OK ] pacman --noconfirm -Sy" >> result.txt ||
+        echo "[ ERROR ] pacman --noconfirm -Sy" >> result.txt
 }
 
 InstallXorg() {
-    echo ":: Install xorg..."
-    sudo pacman --noconfirm -S xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb xorg-server-devel
+    echo ":: Install xorg..." >> result.txt
+    sudo pacman --noconfirm -S xorg-server xorg-xinit xorg-xset xorg-xsetroot xorg-xrandr xorg-xrdb xorg-server-devel &&
+        echo "[ OK ] Install xorg" >> result.txt ||
+        echo "[ ERROR ] Install xorg" >> result.txt
 }
 
 InstallMainPackeges() {
-    echo ":: Install Programs..."
-    sudo pacman --noconfirm -S hyprland hyprpaper uwsm libnewt hyprshot waybar firefox neovim alacritty mc ranger smplayer cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm
+    echo ":: Install Programs..." >> result.txt
+    sudo pacman --noconfirm -S hyprland hyprpaper uwsm libnewt hyprshot waybar firefox neovim alacritty mc ranger smplayer cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm &&
+        echo "[ OK ] Install Programs" >> result.txt ||
+        echo "[ ERROR ] Install Programs" >> result.txt
 }
 
 InstallFont() {
-    echo ":: Install Fonts..."
-    sudo pacman --noconfirm -S ttf-liberation ttf-dejavu opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-jetbrains-mono-nerd
+    echo ":: Install Fonts..." >> result.txt
+    sudo pacman --noconfirm -S ttf-liberation ttf-dejavu opendesktop-fonts ttf-bitstream-vera ttf-arphic-ukai ttf-arphic-uming ttf-jetbrains-mono-nerd &&
+        echo "[ OK ] Install Fonts" >> result.txt ||
+        echo "[ ERROR ] Install Fonts" >> result.txt
 }
 
 InstallOrUpdateBaseBasedevel() {
-    echo ":: Update or install base, base-devel packeges..."
-    sudo pacman --noconfirm -S base base-devel
+    echo ":: Update or install base, base-devel packeges..." >> result.txt
+    sudo pacman --noconfirm -S base base-devel &&
+        echo "[ OK ] Update or install base, base-devel packeges" >> result.txt ||
+        echo "[ ERROR ] Update or install base, base-devel packeges" >> result.txt
 }
 
 InstallLib() {
-    echo ":: Update or install lib's packeges..."
-    sudo pacman --noconfirm -S libxcursor libxrandr libxinerama libxi libxkbcommon
+    echo ":: Update or install lib's packeges..." >> result.txt
+    sudo pacman --noconfirm -S libxcursor libxrandr libxinerama libxi libxkbcommon &&
+        echo "[ OK ] Update or install lib's packeges" >> result.txt ||
+        echo "[ ERROR ] Update or install lib's packeges" >> result.txt
 }
 
 InstallLogin() {
