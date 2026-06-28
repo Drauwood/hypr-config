@@ -93,3 +93,7 @@ InstallOrUpdateBaseBasedevel
 CopyConfigs
 #MakeExecutable
 NvimCopy
+
+cd
+cat result.txt
+rm result.txt
