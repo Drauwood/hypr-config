@@ -34,7 +34,7 @@ InstallXorg() {
 
 InstallMainPackeges() {
     echo ":: Install Programs..."
-    sudo pacman --noconfirm -S hyprland hyprpaper hyprshot waybar firefox neovim alacritty mc ranger smplayer cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm &&
+    sudo pacman --noconfirm -S hyprland hyprpaper uwsm libnewt hyprshot waybar firefox neovim alacritty mc ranger smplayer cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm &&
         echo -e "$GREEN Install Programs" >> result.txt ||
         echo -e "$RED Install Programs" >> result.txt
 }
