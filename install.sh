@@ -91,7 +91,7 @@ UpdateReposytoryesDB
 #InstallXorg
 InstallMainPackeges
 InstallFont
-InstallOrUpdateBaseBasedevel
+#InstallOrUpdateBaseBasedevel
 #InstallLib
 #InstallLogin
 
