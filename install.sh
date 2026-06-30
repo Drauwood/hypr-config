@@ -34,7 +34,7 @@ InstallXorg() {
 
 InstallMainPackeges() {
     echo ":: Install Programs..."
-    sudo pacman --noconfirm -S hyprland hyprpaper uwsm libnewt hyprshot waybar firefox neovim alacritty mc ranger smplayer cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm &&
+    sudo pacman --noconfirm -S hyprland hyprpaper hyprshot waybar firefox neovim alacritty mc ranger smplayer cmake btop numlockx udiskie pamixer feh zip unzip transmission-gtk ripgrep fzf nodejs npm &&
         echo -e "$GREEN Install Programs" >> result.txt ||
         echo -e "$RED Install Programs" >> result.txt
 }
@@ -46,18 +46,18 @@ InstallFont() {
         echo -e "$RED Install Fonts" >> result.txt
 }
 
-InstallOrUpdateBaseBasedevel() {
-    echo ":: Update or install base, base-devel packeges..."
-    sudo pacman --noconfirm -S base base-devel &&
-        echo -e "$GREEN Update or install base, base-devel packeges" >> result.txt ||
-        echo -e "$RED Update or install base, base-devel packeges" >> result.txt
+InstallOrUpdateBasedevel() {
+    echo ":: Update or install base-devel..."
+    sudo pacman --noconfirm -S base-devel &&
+        echo -e "$GREEN Update or install base-devel" >> result.txt ||
+        echo -e "$RED Update or install base-devel" >> result.txt
 }
 
 InstallLib() {
-    echo ":: Update or install lib's packeges..."
+    echo ":: Update or install lib's..."
     sudo pacman --noconfirm -S libxcursor libxrandr libxinerama libxi libxkbcommon &&
-        echo -e "$GREEN Update or install lib's packeges" >> result.txt ||
-        echo -e "$RED Update or install lib's packeges" >> result.txt
+        echo -e "$GREEN Update or install lib's" >> result.txt ||
+        echo -e "$RED Update or install lib's" >> result.txt
 }
 
 InstallLogin() {
@@ -91,7 +91,7 @@ UpdateReposytoryesDB
 #InstallXorg
 InstallMainPackeges
 InstallFont
-#InstallOrUpdateBaseBasedevel
+InstallOrUpdateBasedevel
 #InstallLib
 #InstallLogin
 
