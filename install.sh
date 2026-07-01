@@ -5,7 +5,7 @@ GREEN='\033[0;32m[ OK ]\033[0m'
 
 IsRoot() {
     if [[ $EUID -ne 0 ]]; then
-        echo ":: This script must be run as root..." >> result.txt
+        echo ":: This script must be run as root..."
         exit 1
     fi
 }
