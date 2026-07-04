@@ -1,5 +1,18 @@
 #!/bin/bash
 
+alias c='clear'
+alias u='sudo pacman -Syu'
+alias ll='ls -lha'
+
+alias a='lsblk'
+alias um='udiskie-mount '
+alias uu='udiskie-umount '
+alias uud='udiskie-umount --detach '
+
+alias add='git add .'
+alias com='git commit -m '
+alias push='git push'
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
