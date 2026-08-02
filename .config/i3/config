@@ -5,6 +5,11 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+#
+hide_edge_borders smart
+gaps inner 10px
+smart_gaps on
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -47,6 +52,10 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
+
+# Starting application
+exec --no-startup-id feh --bg-scale ~/.config/hypr/Wallpaper/001.jpg
+exec --no-startup-id setxkbmap -layout us,ru -option grp:alt_shift_toggle
 
 #
 bindsym $mod+F10 exec Telegram
@@ -122,6 +131,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+floating_minimum_size 1280 x 720
+floating_maximum_size 1600 x 900
+
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -183,10 +195,10 @@ mode "resize" {
         bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Left resize shrink width 7 px or 7 ppt
+        bindsym Down resize grow height 7 px or 7 ppt
+        bindsym Up resize shrink height 7 px or 7 ppt
+        bindsym Right resize grow width 7 px or 7 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -202,3 +214,11 @@ bar {
         status_command i3status
         position top
 }
+
+#                        border,   background,  text,       indicator,  child_border
+client.focused           #263640 #263640    #e3e3e3   #696ebf   #2587cc1
+client.focused_inactive  #263640 #b08500    #e3e3e3   #263640   #263640
+client.unfocused         #263640 #b08500    #e3e3e3   #263640   #263640
+client.urgent            #263640 #b08500    #e3e3e3   #263640   #263640
+client.placeholder       #263640 #b08500    #e3e3e3   #263640   #263640
+client.background        #263640
