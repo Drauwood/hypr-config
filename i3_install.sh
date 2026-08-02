@@ -70,6 +70,7 @@ CopyConfigs() {
     cp -rf .config ~/
     cp -rf .bash_profile ~/
     cp -rf .bashrc ~/
+    cp -rf .xinitrc ~/
 }
 
 MakeExecutable() {
