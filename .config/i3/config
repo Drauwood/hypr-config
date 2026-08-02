@@ -48,6 +48,19 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
+#
+bindsym $mod+F10 exec Telegram
+bindsym $mod+F11 exec transmission-gtk
+bindsym $mod+F12 exec steam
+
+#
+bindsym Pause exec firefox
+bindsym $mod+Pause exec firefox --private-window
+
+#
+bindsym $mod+Escape exec poweoff
+bindsym $mod+Insert exec reboot
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
