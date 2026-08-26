@@ -79,8 +79,7 @@ MakeExecutable() {
 
 NvimCopy() {
     echo ":: Copy Nvim configs..."
-    git clone https://github.com/NvChad/starter ~/.config/nvim &&
-    #git clone https://github.com/Drauwood/nvim.git ~/.config/nvim &&
+    git clone https://github.com/Drauwood/nvim.git ~/.config/nvim &&
         echo -e "[$GREEN] Copy Nvim configs" >> result.txt ||
         echo -e "[$RED] Copy Nvim configs" >> result.txt
 }
