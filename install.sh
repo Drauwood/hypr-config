@@ -47,10 +47,10 @@ InstallFont() {
 }
 
 InstallOrUpdateBasedevel() {
-    echo ":: Update or install base-devel..."
-    sudo pacman --noconfirm -S base-devel &&
-        echo -e "[$GREEN] Update or install base-devel" >> result.txt ||
-        echo -e "[$RED] Update or install base-devel" >> result.txt
+    echo ":: Update or install base-devel qt6-base..."
+    sudo pacman --noconfirm -S base-devel qt6-base &&
+        echo -e "[$GREEN] Update or install base-devel  qt6-base" >> result.txt ||
+        echo -e "[$RED] Update or install base-devel qt6-base" >> result.txt
 }
 
 InstallLib() {
